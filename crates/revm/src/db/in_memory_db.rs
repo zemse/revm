@@ -32,6 +32,7 @@ pub struct CacheDB<ExtDB> {
     /// The underlying database ([DatabaseRef]) that is used to load data.
     ///
     /// Note: this is read-only, data is never written to this database.
+    #[serde(skip_serializing)]
     pub db: ExtDB,
 }
 
